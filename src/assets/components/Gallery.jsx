@@ -109,12 +109,12 @@ export const Gallery = () => {
 
   return (
     <section className="hidden w-[445px] lg:flex lg:flex-col lg:gap-5 ">
-      <picture>
+      <picture> 
         <img
           onClick={() => setDropDownGallery(!dropDownGallery)}
-          className="col-span-4 rounded-2xl "
+          className="rounded-2xl "
           src={selectedImageSrc}
-          alt=""
+          alt="product"
         />
       </picture>
       <picture className="flex gap-4 justify-between">

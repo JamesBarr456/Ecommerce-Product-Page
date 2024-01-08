@@ -12,7 +12,7 @@ const ContentCartModal = (handleTrash, count) => {
         <div className="text-Dark-Grayish-Blue">
           <p>Fall Limited Edition Sneakers</p>
           <span>
-            ${price.toFixed(2)} x {count}{" "}
+            ${price.toFixed(2)} x {count}
             <span className="font-bold text-Black">
               ${(price * count).toFixed(2)}
             </span>
@@ -30,7 +30,7 @@ const ContentCartModal = (handleTrash, count) => {
   );
 };
 
-// Contenido con cart Modal cuando no e agrega productos
+// Contenido con cart Modal cuando no se agrega productos
 const EmptyCartModal = () => {
   return (
     <p className="w-full text-center text-Dark-Grayish-Blue font-bold py-[72px]">
