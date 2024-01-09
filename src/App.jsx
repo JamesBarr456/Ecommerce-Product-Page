@@ -10,36 +10,70 @@ import { CartModal } from "./assets/components/CartModal";
 import { useProductContext } from "./assets/hooks/ProductContext";
 import { Gallery } from "./assets/components/Gallery";
 import { NavPages } from "./assets/components/NavPages";
+import { useResizeListener } from "./assets/helpers/useResizeListener";
 export const App = () => {
   const [dropDownMenu, setDropDownMenu] = useState(false);
   const [dropDownCart, setDropDownCart] = useState(false);
   const { addToCart } = useProductContext();
+  // Funcion para activar el menu desplegable
   const activeMenu = () => {
     setDropDownMenu(!dropDownMenu);
   };
+  //Funcion para activar el carrito
   const activeCart = () => {
     setDropDownCart(!dropDownCart);
   };
+
+  //Hook para controlar que si pasa el screen a lg el menu desplegable se cierre si esta abierto
+  useResizeListener(
+    1024,
+    () => {
+      if (dropDownMenu) {
+        activeMenu();
+      }
+    },
+    [dropDownMenu]
+  );
   return (
     <>
-      <header className="container mx-auto flex justify-between px-6 py-6 lg:mb-20 lg:py-10 lg:border-Grayish-Blue lg:border-b-2">
-        <picture className="flex items-center gap-5 lg:gap-16">
+      <header
+        className="
+                  container flex justify-between 
+                  mx-auto px-6 py-6 lg:mb-20 lg:py-10
+                 lg:border-Grayish-Blue lg:border-b-2"
+      >
+        <picture
+          className="
+                    flex items-center gap-5 lg:gap-16"
+        >
           <button
             onClick={activeMenu}
-            className="text-[#69707D] hover:text-Orange lg:hidden"
+            className="
+                      text-[#69707D] hover:text-Orange lg:hidden"
           >
-            <Menu></Menu>
+            <Menu />
           </button>
           <img src={logo} alt="sneakers" />
-          <NavPages></NavPages>
+          <NavPages />
         </picture>
-        <picture className="flex items-center gap-5 lg:gap-12">
+        <picture
+          className="
+                    flex items-center gap-5 lg:gap-12"
+        >
           <div onClick={activeCart} className="relative">
-            <button className="text-[#69707D] hover:text-Orange">
-              <Cart></Cart>
+            <button
+              className="
+                        text-[#69707D] hover:text-Orange"
+            >
+              <Cart />
             </button>
             {addToCart === 0 ? null : (
-              <span className="absolute -top-2 bg-Orange text-White font-bold px-2 rounded-md -right-2 text-[10px]">
+              <span
+                className="
+                          absolute -top-2 -right-2 px-2
+                          bg-Orange rounded-md 
+                          text-white font-bold  text-[10px]"
+              >
                 {addToCart}
               </span>
             )}
@@ -47,18 +81,23 @@ export const App = () => {
           <img
             src={avatar}
             alt="avatar"
-            className="w-6 h-6 lg:w-12 lg:h-12 border-transparent border-2 rounded-full hover:border-Orange "
+            className="
+                      w-6 h-6 lg:w-12 lg:h-12 
+                      border-transparent border-2 rounded-full hover:border-Orange"
           />
         </picture>
-        {dropDownMenu ? (
-          <DropdownMenu activeMenu={activeMenu}></DropdownMenu>
-        ) : null}
-        {dropDownCart ? <CartModal></CartModal> : null}
+        {dropDownMenu && <DropdownMenu activeMenu={activeMenu} />}
+        {dropDownCart && <CartModal />}
       </header>
-      <main className="container  mx-auto md:w-full lg:h-[600px] lg:flex lg:justify-evenly">
-        <SliderThumbnail></SliderThumbnail>
-        <Gallery></Gallery>
-        <DescriptionProduct></DescriptionProduct>
+      <main
+        className="
+                  container lg:flex lg:justify-evenly 
+                  md:w-full lg:h-[600px]
+                  mx-auto"
+      >
+        <SliderThumbnail />
+        <Gallery />
+        <DescriptionProduct />
       </main>
     </>
   );

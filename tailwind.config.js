@@ -17,8 +17,6 @@ export default {
         "Grayish-Blue": "hsl(223, 64%, 98%)",
         Orange: "hsl(26, 100%, 55%)",
         "Pale-Orange": " hsl(25, 100%, 94%)",
-        Black: " hsl(0, 0%, 0%)",
-        White: " hsl(0, 0%, 100%)",
       },
       fill: {
         current: "currentColor",

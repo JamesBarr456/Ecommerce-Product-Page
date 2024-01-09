@@ -6,30 +6,79 @@ export const DescriptionProduct = () => {
   const { countProduct, increaseProducts, decreaseProducts, handleAddToCart } =
     useProductContext();
   return (
-    <section className="lg:flex lg:items-center lg:w-[450px]">
-      <div className="flex flex-col gap-6 p-7 lg:p-0 font-Kumbh-Sans">
-        <h2 className="text-Orange text-xs lg:text-base tracking-[2px] font-bold">
+    <section
+      className="
+                lg:flex lg:items-center 
+                lg:w-[450px]"
+    >
+      <div
+        className="
+                  font-Kumbh-Sans
+                  flex flex-col gap-6 
+                  p-7 lg:p-0"
+      >
+        <h2
+          className="
+                  text-Orange text-xs lg:text-base tracking-[2px] font-bold"
+        >
           SNEAKER COMPANY
         </h2>
-        <h1 className="font-bold text-3xl lg:text-[42px] ">
+        <h1
+          className="
+                    font-bold text-3xl lg:text-[42px]"
+        >
           Fall Limited Edition Sneakers
         </h1>
-        <p className="text-[15px] lg:text-base  text-Dark-Grayish-Blue">
+        <p
+          className="
+                    text-[15px] lg:text-base  text-Dark-Grayish-Blue"
+        >
           These low-profile sneakers are your perfect casual wear companion.
           Featuring durable rubber outer sole, they'll withstand everything the
           weather can offer.
         </p>
-        <div className="flex justify-between font-bold lg:flex-col lg:gap-5">
-          <p className="flex items-center gap-4 text-3xl">
+        <div
+          className="
+                    font-bold
+                    flex justify-between  lg:flex-col lg:gap-5"
+        >
+          <p
+            className="
+                      text-3xl
+                      flex items-center gap-4"
+          >
             $125.00
-            <span className="text-base bg-Pale-Orange px-2 py-1 rounded-md text-Orange">
+            <span
+              className="
+                      bg-Pale-Orange
+                        text-base text-Orange
+                        px-2 py-1 
+                        rounded-md"
+            >
               50%
             </span>
           </p>
-          <p className="text-Light-Grayish-blue line-through">$250.00</p>
+          <p
+            className="
+                    text-Light-Grayish-blue line-through"
+          >
+            $250.00
+          </p>
         </div>
-        <div className="flex flex-col gap-6 lg:flex-row mb-10 lg:justify-between ">
-          <div className="bg-Grayish-Blue flex items-center rounded-md justify-between p-4 lg:w-[35%] font-bold  ">
+        <div
+          className="
+                    flex flex-col gap-6 lg:flex-row lg:justify-between 
+                    mb-10"
+        >
+          <div
+            className="
+                  bg-Grayish-Blue 
+                  font-bold 
+                  flex items-center  justify-between 
+                  p-4 
+                  lg:w-[35%] 
+                  rounded-md"
+          >
             <button>
               <img
                 className="hover:opacity-50"
@@ -50,7 +99,13 @@ export const DescriptionProduct = () => {
           </div>
           <button
             onClick={handleAddToCart}
-            className="flex gap-4 p-4 rounded-md hover:opacity-50  bg-Orange  text-White font-bold justify-center lg:w-[60%]"
+            className="
+                     bg-Orange
+                     text-white font-bold
+                      flex justify-center gap-4 
+                      p-4 
+                      lg:w-[60%]
+                      rounded-md hover:opacity-50"
           >
             <Cart></Cart>
             <p>Add to cart</p>

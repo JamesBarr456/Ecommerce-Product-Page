@@ -8,7 +8,11 @@ export const SliderThumbnail = () => {
   });
   return (
     <section
-      className="container relative h-[300px] md:h-[500px] lg:hidden bg-cover bg-center bg-no-repeat"
+      className="
+                bg-cover bg-center bg-no-repeat
+                container relative 
+                lg:hidden
+                h-[300px] md:h-[500px]"
       style={{
         backgroundImage: `url('../../../public/images/png/image-product-${count}.jpg')`,
       }}

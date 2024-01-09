@@ -6,15 +6,18 @@ import { Close } from "./Icons/Close";
 const Thumbnail = ({ src, alt, index, onClick, isSelected }) => {
   return (
     <div
-      className={`w-[89px] h-[89px] rounded-xl bg-white ${
-        isSelected && "border-2 border-Orange"
-      }`}
+      className={`
+              bg-white
+                w-[89px] h-[89px] rounded-xl  
+                ${isSelected && "border-2 border-Orange"}`}
       onClick={() => onClick(index)}
     >
       <img
-        className={`rounded-xl ${
-          isSelected && "opacity-50"
-        } transition-opacity duration-300 ease-in-out transform hover:opacity-70`}
+        className={`
+                  rounded-xl 
+                  ${
+                    isSelected && "opacity-50"
+                  } transition-opacity duration-300 ease-in-out transform hover:opacity-70`}
         src={src}
         alt={alt}
       />
@@ -61,17 +64,31 @@ const GalleryModal = ({ slider: Slider, showModal }) => {
   };
 
   return (
-    <section className="absolute z-50 min-h-full w-full top-0 left-0 bg-Black/70">
-      <div className="hidden mx-auto my-28 relative w-[500px]  lg:flex lg:flex-col lg:gap-10 ">
+    <section
+      className="
+                bg-black/70
+                absolute z-50 top-0 left-0
+                min-h-full w-full"
+    >
+      <div
+        className="   
+                  hidden relative lg:flex lg:flex-col lg:gap-10
+                  mx-auto my-28  w-[500px]"
+      >
         <button
           onClick={() => showModal(false)}
-          className="text-white flex justify-end hover:text-Orange"
+          className="
+                  text-white hover:text-Orange
+                  flex justify-end"
         >
           <Close></Close>
         </button>
         <picture>
           <img
-            className="col-span-4 rounded-2xl  h-[500px]"
+            className="
+                      col-span-4 
+                      h-[500px]
+                      rounded-2xl"
             src={selectedImageSrc}
             alt="product"
           />
@@ -89,6 +106,8 @@ const GalleryModal = ({ slider: Slider, showModal }) => {
           plusCount={() =>
             updateCountAndThumbnail(count + 1 <= 3 ? count + 1 : 0)
           }
+          marginNext={"-mr-9"}
+          marginPrevious={"-ml-9"}
         ></Slider>
       </div>
     </section>
@@ -108,8 +127,12 @@ export const Gallery = () => {
   }.jpg`;
 
   return (
-    <section className="hidden w-[445px] lg:flex lg:flex-col lg:gap-5 ">
-      <picture> 
+    <section
+      className="
+                hidden lg:flex lg:flex-col lg:gap-5 
+                w-[445px]"
+    >
+      <picture>
         <img
           onClick={() => setDropDownGallery(!dropDownGallery)}
           className="rounded-2xl "
