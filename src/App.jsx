@@ -86,7 +86,9 @@ export const App = () => {
                       border-transparent border-2 rounded-full hover:border-Orange"
           />
         </picture>
-        {dropDownMenu && <DropdownMenu activeMenu={activeMenu} />}
+        {dropDownMenu && (
+          <DropdownMenu hiddenMenu={activeMenu} active={dropDownMenu} />
+        )}
         {dropDownCart && <CartModal />}
       </header>
       <main

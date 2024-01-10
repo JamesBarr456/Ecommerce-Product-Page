@@ -7,10 +7,14 @@ export const NavPages = () => {
         <li
           key={list.id}
           className="
-                    relative hover:scale-x-100 
-                    hover:after:content-[''] hover:after:bg-Orange hover:   
-                    hover:after:absolute hover:after:left-0  hover:after:w-full hover:after:h-1 hover:after:-bottom-14
-                    hover:after:transition-transform hover:after:duration-500"
+                    relative 
+                    after:content-[''] after:bg-Orange   
+                    after:absolute  
+                    after:w-full after:h-1 
+                    after:-bottom-14  after:left-0
+                    after:rounded-md
+                    after:transition-transform after:scale-x-0 after:duration-500 after:ease-in-out
+                    hover:after:transform hover:after:scale-x-100"
         >
           <a href="">{list.name}</a>
         </li>

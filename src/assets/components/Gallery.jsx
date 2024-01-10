@@ -7,17 +7,19 @@ const Thumbnail = ({ src, alt, index, onClick, isSelected }) => {
   return (
     <div
       className={`
-              bg-white
+                overflow-hidden
+              bg-white 
                 w-[89px] h-[89px] rounded-xl  
-                ${isSelected && "border-2 border-Orange"}`}
+                ${isSelected && "border-2 border-Orange"}
+                duration-700 ease-in-out hover:scale-90`}
       onClick={() => onClick(index)}
     >
       <img
         className={`
-                  rounded-xl 
+                  
                   ${
                     isSelected && "opacity-50"
-                  } transition-opacity duration-300 ease-in-out transform hover:opacity-70`}
+                  } transition-opacity   hover:opacity-70`}
         src={src}
         alt={alt}
       />
