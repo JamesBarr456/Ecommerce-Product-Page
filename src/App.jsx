@@ -12,27 +12,27 @@ import { Gallery } from "./assets/components/Gallery";
 import { NavPages } from "./assets/components/NavPages";
 import { useResizeListener } from "./assets/helpers/useResizeListener";
 export const App = () => {
-  const [dropDownMenu, setDropDownMenu] = useState(false);
-  const [dropDownCart, setDropDownCart] = useState(false);
+  const [activeSideBar, setActiveSideBar] = useState(false);
+  const [activeCart, setActiveCart] = useState(false);
   const { addToCart } = useProductContext();
   // Funcion para activar el menu desplegable
-  const activeMenu = () => {
-    setDropDownMenu(!dropDownMenu);
+  const toggleMenu = () => {
+    setActiveSideBar(!activeSideBar);
   };
   //Funcion para activar el carrito
-  const activeCart = () => {
-    setDropDownCart(!dropDownCart);
+  const toggleCart = () => {
+    setActiveCart(!dropDownCart);
   };
 
   //Hook para controlar que si pasa el screen a lg el menu desplegable se cierre si esta abierto
   useResizeListener(
     1024,
     () => {
-      if (dropDownMenu) {
-        activeMenu();
+      if (activeSideBar) {
+        toggleMenu();
       }
     },
-    [dropDownMenu]
+    [activeSideBar]
   );
   return (
     <>
@@ -47,7 +47,7 @@ export const App = () => {
                     flex items-center gap-5 lg:gap-16"
         >
           <button
-            onClick={activeMenu}
+            onClick={toggleMenu}
             className="
                       text-[#69707D] hover:text-Orange lg:hidden"
           >
@@ -60,7 +60,7 @@ export const App = () => {
           className="
                     flex items-center gap-5 lg:gap-12"
         >
-          <div onClick={activeCart} className="relative">
+          <div onClick={toggleCart} className="relative">
             <button
               className="
                         text-[#69707D] hover:text-Orange"
@@ -86,10 +86,10 @@ export const App = () => {
                       border-transparent border-2 rounded-full hover:border-Orange"
           />
         </picture>
-        {dropDownMenu && (
-          <DropdownMenu hiddenMenu={activeMenu} active={dropDownMenu} />
+        {activeSideBar && (
+          <DropdownMenu hiddenMenu={toggleMenu} active={activeSideBar} />
         )}
-        {dropDownCart && <CartModal />}
+        {activeCart && <CartModal />}
       </header>
       <main
         className="
