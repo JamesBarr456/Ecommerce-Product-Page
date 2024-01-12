@@ -62,15 +62,16 @@ export const App = () => {
           className="
                     flex items-center gap-5 lg:gap-12"
         >
-          <div onClick={toggleCart} className="relative">
+          <div className="relative">
             <button
+               onClick={toggleCart}
               className="
                         text-[#69707D] hover:text-Orange
                         "
             >
               <Cart />
             </button>
-            <CartModal active={activeCart} />
+          
             <span
               className={`
                           absolute -top-2 -right-2 px-2
@@ -85,6 +86,7 @@ export const App = () => {
             >
               {addToCart}
             </span>
+            <CartModal active={activeCart} />
           </div>
           <img
             src={avatar}

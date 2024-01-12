@@ -17,9 +17,8 @@ const Thumbnail = ({ src, alt, index, onClick, isSelected }) => {
       <img
         className={`
                   
-                  ${
-                    isSelected && "opacity-50"
-                  } transition-opacity   hover:opacity-70`}
+                  ${isSelected && "opacity-50"
+          } transition-opacity   hover:opacity-70`}
         src={src}
         alt={alt}
       />
@@ -48,11 +47,14 @@ const ThumbnailListComponent = ({
 };
 
 const GalleryModal = ({ slider: Slider, showModal }) => {
+
   const { count, setCount } = useCounter({
     minCount: 0,
     maxCount: 3,
   });
+
   const [selectedThumbnailIndex, setSelectedThumbnailIndex] = useState(0);
+
   const handleThumbnailClick = (index) => {
     setSelectedThumbnailIndex(index);
     setCount(index);
@@ -87,10 +89,13 @@ const GalleryModal = ({ slider: Slider, showModal }) => {
         </button>
         <picture>
           <img
-            className="
+            className={`
                       col-span-4 
                       h-[500px]
-                      rounded-2xl"
+                      rounded-2xl
+                      transition-opacity duration-300 ease-out
+                      ${selectedThumbnailIndex === count ? 'opacity-100' : 'opacity-20'}
+                      `}
             src={selectedImageSrc}
             alt="product"
           />
@@ -124,9 +129,8 @@ export const Gallery = () => {
     setSelectedThumbnailIndex(index);
   };
 
-  const selectedImageSrc = `/images/png/image-product-${
-    selectedThumbnailIndex + 1
-  }.jpg`;
+  const selectedImageSrc = `/images/png/image-product-${selectedThumbnailIndex + 1
+    }.jpg`;
 
   return (
     <section

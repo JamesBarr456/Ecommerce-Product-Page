@@ -1,6 +1,7 @@
 import product from "../../../public/images/png/image-product-1-thumbnail.jpg";
 import { Delete } from "../components/Icons/Delete.jsx";
 import { useProductContext } from "../hooks/ProductContext";
+import { CustomButton } from "./CustomButton.jsx";
 
 const ContentCartModal = ({ handleTrash, count }) => {
   const price = 125;
@@ -39,16 +40,9 @@ const ContentCartModal = ({ handleTrash, count }) => {
           <Delete />
         </button>
       </div>
-      <button
-        className="
-                 bg-Orange
-                 text-white font-bold
-                  p-4
-                  w-full 
-                  rounded-lg hover:opacity-50"
-      >
-        Checkout
-      </button>
+      <CustomButton>
+        <p>Checkout</p>
+      </CustomButton>
     </div>
   );
 };
@@ -75,7 +69,7 @@ export const CartModal = ({ active }) => {
       className={`
                 absolute z-10  top-20 -right-[68px] lg:top-16 
                 px-2 
-                w-[375px]
+                w-screen sm:w-[375px]
                 transform transition-all  duration-500 ease-in-out
                 ${
                   active

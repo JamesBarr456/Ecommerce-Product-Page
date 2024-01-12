@@ -2,6 +2,7 @@ import minus from "../../../public/images/svg/icon-minus.svg";
 import plus from "../../../public/images/svg/icon-plus.svg";
 import { useProductContext } from "../hooks/ProductContext";
 import { Cart } from "./Icons/Cart";
+import { CustomButton } from "./CustomButton";
 export const DescriptionProduct = () => {
   const { countProduct, increaseProducts, decreaseProducts, handleAddToCart } =
     useProductContext();
@@ -75,8 +76,8 @@ export const DescriptionProduct = () => {
                   bg-Grayish-Blue 
                   font-bold 
                   flex items-center  justify-between 
-                  p-4 
-                  lg:w-[35%] 
+                  p-4 gap-4
+                  lg:w-[50%] 
                   rounded-md"
           >
             <button>
@@ -97,19 +98,13 @@ export const DescriptionProduct = () => {
               />
             </button>
           </div>
-          <button
-            onClick={handleAddToCart}
-            className="
-                     bg-Orange
-                     text-white font-bold
-                      flex justify-center gap-4 
-                      p-4 
-                      lg:w-[60%]
-                      rounded-md hover:opacity-50"
-          >
-            <Cart></Cart>
-            <p>Add to cart</p>
-          </button>
+          <CustomButton onClick={handleAddToCart}>
+            <div
+              className="flex items-center justify-center gap-4">
+              <Cart></Cart>
+              <p>Add to cart</p>
+            </div>
+          </CustomButton>
         </div>
       </div>
     </section>
