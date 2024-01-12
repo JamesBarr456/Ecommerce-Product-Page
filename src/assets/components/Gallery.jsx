@@ -8,10 +8,10 @@ const Thumbnail = ({ src, alt, index, onClick, isSelected }) => {
     <div
       className={`
                 overflow-hidden
-              bg-white 
-                w-[89px] h-[89px] rounded-xl  
-                ${isSelected && "border-2 border-Orange"}
-                duration-700 ease-in-out hover:scale-90`}
+                bg-white 
+                w-[89px] h-[89px] 
+                ${isSelected && "border-2 border-Orange"} rounded-xl  
+                duration-700 ease-out hover:scale-90`}
       onClick={() => onClick(index)}
     >
       <img

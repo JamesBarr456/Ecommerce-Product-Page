@@ -86,9 +86,8 @@ export const App = () => {
                       border-transparent border-2 rounded-full hover:border-Orange"
           />
         </picture>
-        {activeSideBar && (
-          <DropdownMenu hiddenMenu={toggleMenu} active={activeSideBar} />
-        )}
+        <DropdownMenu hiddenMenu={toggleMenu} active={activeSideBar} />
+
         {activeCart && <CartModal />}
       </header>
       <main
