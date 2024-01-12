@@ -21,7 +21,8 @@ export const App = () => {
   };
   //Funcion para activar el carrito
   const toggleCart = () => {
-    setActiveCart(!dropDownCart);
+    setActiveCart(!activeCart);
+    console.log(activeCart);
   };
 
   //Hook para controlar que si pasa el screen a lg el menu desplegable se cierre si esta abierto
@@ -34,11 +35,12 @@ export const App = () => {
     },
     [activeSideBar]
   );
+
   return (
     <>
       <header
         className="
-                  container flex justify-between 
+                  container  flex justify-between 
                   mx-auto px-6 py-6 lg:mb-20 lg:py-10
                  lg:border-Grayish-Blue lg:border-b-2"
       >
@@ -63,20 +65,26 @@ export const App = () => {
           <div onClick={toggleCart} className="relative">
             <button
               className="
-                        text-[#69707D] hover:text-Orange"
+                        text-[#69707D] hover:text-Orange
+                        "
             >
               <Cart />
             </button>
-            {addToCart === 0 ? null : (
-              <span
-                className="
+            <CartModal active={activeCart} />
+            <span
+              className={`
                           absolute -top-2 -right-2 px-2
                           bg-Orange rounded-md 
-                          text-white font-bold  text-[10px]"
-              >
-                {addToCart}
-              </span>
-            )}
+                          text-white font-bold  text-[10px]
+                          transform transition-all  duration-500 ease-in-out
+                          ${
+                            addToCart === 0
+                              ? "opacity-0 scale-0"
+                              : "opacity-100 scale-100"
+                          }`}
+            >
+              {addToCart}
+            </span>
           </div>
           <img
             src={avatar}
@@ -87,8 +95,6 @@ export const App = () => {
           />
         </picture>
         <DropdownMenu hiddenMenu={toggleMenu} active={activeSideBar} />
-
-        {activeCart && <CartModal />}
       </header>
       <main
         className="

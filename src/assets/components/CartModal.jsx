@@ -67,15 +67,22 @@ const EmptyCartModal = () => {
   );
 };
 
-export const CartModal = () => {
+export const CartModal = ({ active }) => {
   const { addToCart, handleTrashCart } = useProductContext();
 
   return (
     <section
-      className="
-                absolute z-20  top-20 right-0 md:right-16 lg:right-8 lg:top-28  
+      className={`
+                absolute z-10  top-20 -right-[68px] lg:top-16 
                 px-2 
-                w-full sm:w-[375px]"
+                w-[375px]
+                transform transition-all  duration-500 ease-in-out
+                ${
+                  active
+                    ? "opacity-100 translate-y-0  translate-x-0 scale-100 "
+                    : "opacity-0 -translate-y-3/4 translate-x-1/3 scale-0  "
+                }
+                `}
     >
       <div
         className="

@@ -5,11 +5,9 @@ export const DropdownMenu = ({ hiddenMenu, active }) => {
     <>
       <div
         className={` 
-                  bg-black/70
-                  z-20 fixed top-0 left-0
-                  w-screen h-screen
-                  transition-transform transform ease-in-out duration-500
-                  ${active ? " translate-x-0" : "-translate-x-full"}
+                  z-20 fixed top-0 left-0 w-screen h-screen
+                  bg-black/70 transform ease-out duration-500
+                  ${active ? "translate-x-0" : "-translate-x-full"}
                   `}
       ></div>
       <div
@@ -19,9 +17,8 @@ export const DropdownMenu = ({ hiddenMenu, active }) => {
           h-screen w-3/5 
           transition-transform transform ease-out duration-500
           p-7 
-          ${active ? " translate-x-0" : "-translate-x-full"}
+          ${active ? "translate-x-0" : "-translate-x-full"}
         `}
-        
       >
         <button
           onClick={hiddenMenu}
