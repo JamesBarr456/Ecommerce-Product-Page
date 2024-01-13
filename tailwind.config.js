@@ -3,6 +3,15 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        fade: {
+          from: { opacity: "0.2" },
+          to: { opacity: "1" },
+        },
+      },
+      animation: {
+        fade: "fade 1.5s",
+      },
       fontFamily: {
         "Kumbh-Sans": ["Kumbh Sans", "sans-serif"],
       },
