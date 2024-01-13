@@ -52,7 +52,7 @@ export const GalleryModal = ({ slider: Slider, hiddenModal }) => {
                     ${
                       selectedThumbnailIndex === index
                         ? "animate-fade"
-                        : "hidden"
+                        : "invisible"
                     }`}
               src={selectedThumbnailIndex === index ? product : ""}
               alt="product"

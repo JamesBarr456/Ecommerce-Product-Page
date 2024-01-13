@@ -1,6 +1,6 @@
 import { Close } from "./Icons/Close.jsx";
 import { NavList } from "../static/NavList.js";
-export const DropdownMenu = ({ hiddenMenu, active }) => {
+export const Sidebar = ({ hiddenMenu, active }) => {
   return (
     <>
       <div

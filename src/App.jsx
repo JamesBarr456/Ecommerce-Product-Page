@@ -3,7 +3,7 @@ import avatar from "../public/images/png/image-avatar.png";
 import { useState } from "react";
 import { Cart } from "./assets/components/Icons/Cart";
 import { Menu } from "./assets/components/Icons/Menu";
-import { DropdownMenu } from "./assets/components/DropdownMenu";
+import { Sidebar } from "./assets/components/Sidebar";
 import { SliderThumbnail } from "./assets/components/SliderThumbnail";
 import { DescriptionProduct } from "./assets/components/DescriptionProduct";
 import { CartModal } from "./assets/components/CartModal";
@@ -64,14 +64,14 @@ export const App = () => {
         >
           <div className="relative">
             <button
-               onClick={toggleCart}
+              onClick={toggleCart}
               className="
                         text-[#69707D] hover:text-Orange
                         "
             >
               <Cart />
             </button>
-          
+
             <span
               className={`
                           absolute -top-2 -right-2 px-2
@@ -96,7 +96,7 @@ export const App = () => {
                       border-transparent border-2 rounded-full hover:border-Orange"
           />
         </picture>
-        <DropdownMenu hiddenMenu={toggleMenu} active={activeSideBar} />
+        <Sidebar hiddenMenu={toggleMenu} active={activeSideBar} />
       </header>
       <main
         className="

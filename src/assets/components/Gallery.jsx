@@ -18,12 +18,13 @@ export const Gallery = () => {
                 hidden lg:flex lg:flex-col lg:gap-5 
                 w-[445px]"
     >
-      <picture>
+      <picture id="animation-carousel" data-carousel="static">
         {Products.map((product, index) => (
-          <img
-            key={index}
-            onClick={() => setDropDownGallery(!dropDownGallery)}
-            className={`
+          <div>
+            <img
+              key={index}
+              onClick={() => setDropDownGallery(!dropDownGallery)}
+              className={`
                     rounded-2xl 
                     transition-opacity duration-300 ease
                     ${
@@ -31,9 +32,10 @@ export const Gallery = () => {
                         ? "animate-fade"
                         : "hidden"
                     }`}
-            src={selectedThumbnailIndex === index ? product : ""}
-            alt="product"
-          />
+              src={selectedThumbnailIndex === index ? product : ""}
+              alt="product"
+            />
+          </div>
         ))}
       </picture>
       <picture className="flex gap-4 justify-between">
