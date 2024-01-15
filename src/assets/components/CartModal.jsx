@@ -1,7 +1,7 @@
-import product from "../../../public/images/png/image-product-1-thumbnail.jpg";
+import { Products } from "../static/Data.js";
 import { Delete } from "../components/Icons/Delete.jsx";
 import { useProductContext } from "../hooks/ProductContext";
-import { CustomButton } from "./CustomButton.jsx";
+import { CustomButton } from "./common/CustomButton.jsx";
 
 const ContentCartModal = ({ handleTrash, count }) => {
   const price = 125;
@@ -18,7 +18,7 @@ const ContentCartModal = ({ handleTrash, count }) => {
                   w-full"
       >
         <img
-          src={product}
+          src={Products[0]}
           className="
                     w-12 h-12 
                     rounded-md"

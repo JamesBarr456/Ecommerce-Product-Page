@@ -1,11 +1,11 @@
 export const ThumbnailsComponent = ({
   handleThumbnailClick,
   selectedThumbnailIndex,
-  thumbnails,
+  imgs,
 }) => {
   return (
     <>
-      {thumbnails.map((thumbnail, index) => (
+      {imgs.map((img, index) => (
         <div
           key={index}
           className={`
@@ -17,14 +17,14 @@ export const ThumbnailsComponent = ({
                       "border-2 border-Orange"
                     } 
                     rounded-xl  
-                    duration-700 ease-out hover:scale-90`}
+                    duration-300 ease-out hover:scale-90`}
           onClick={() => handleThumbnailClick(index)}
         >
           <img
             className={`${
               selectedThumbnailIndex === index && "opacity-50"
             } transition-opacity   hover:opacity-70`}
-            src={thumbnail}
+            src={img}
             alt="thumnail"
           />
         </div>

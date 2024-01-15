@@ -1,8 +1,8 @@
-import minus from "../../../public/images/svg/icon-minus.svg";
-import plus from "../../../public/images/svg/icon-plus.svg";
-import { useProductContext } from "../hooks/ProductContext";
+import minus from "../static/svg/icon-minus.svg";
+import plus from "../static/svg/icon-plus.svg";
 import { Cart } from "./Icons/Cart";
-import { CustomButton } from "./CustomButton";
+import { useProductContext } from "../hooks/ProductContext";
+import { CustomButton } from "./common/CustomButton";
 export const DescriptionProduct = () => {
   const { countProduct, increaseProducts, decreaseProducts, handleAddToCart } =
     useProductContext();
@@ -99,8 +99,7 @@ export const DescriptionProduct = () => {
             </button>
           </div>
           <CustomButton onClick={handleAddToCart}>
-            <div
-              className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-4">
               <Cart></Cart>
               <p>Add to cart</p>
             </div>

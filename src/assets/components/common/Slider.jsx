@@ -1,5 +1,5 @@
-import { Previous } from "./Icons/Previous";
-import { Next } from "./Icons/Next";
+import { Previous } from "../Icons/Previous";
+import { Next } from "../Icons/Next";
 
 const ButtonSlider = ({ icon: Icon, action, margin, bgColor, hoverColor }) => {
   // Clases por defecto
