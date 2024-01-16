@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useCounter } from "../../hooks/useCounter";
+import { useCounter } from "@/assets/hooks/useCounter";
 import { ThumbnailsComponent } from "./ThumbnailsComponent";
-import { Thumbnails, Products } from "../../static/Data";
+import { Thumbnails, Products } from "@/assets/static/Data";
 import { GalleryModal } from "./GalleryModal";
 import { Carrousel } from "../common/Carrousel";
 

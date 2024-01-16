@@ -1,5 +1,5 @@
-import { Close } from "./Icons/Close.jsx";
-import { NavList } from "../static/Data.js";
+import { Close } from "../Icons/Close.jsx";
+import { NavList } from "@/assets/static/Data.js";
 export const Sidebar = ({ hiddenSidebar, showSidebar }) => {
   return (
     <>

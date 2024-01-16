@@ -1,11 +1,11 @@
-import logo from "../static/svg/logo.svg";
-import avatar from "../static/png//image-avatar.png";
-import { Cart } from "./Icons/Cart";
-import { Menu } from "./Icons/Menu";
-import { useProductContext } from "../hooks/ProductContext";
-import { CartModal } from "./CartModal";
 import { useState } from "react";
-import { NavList } from "../static/Data";
+import { Cart } from "../Icons/Cart";
+import { Menu } from "../Icons/Menu";
+import { CartModal } from "../CartModal";
+import logo from '@/assets/static/svg/logo.svg';
+import avatar from "@/assets/static/png//image-avatar.png";
+import { NavList } from "@/assets/static/Data";
+import { useProductContext } from "@/assets/hooks/ProductContext";
 
 const NavPages = () => {
   return (
@@ -73,11 +73,10 @@ export const Navbar = ({ handlerMenu }) => {
                           bg-Orange rounded-full
                           text-white text-center font-bold  text-[10px]
                           transform transition-all  duration-500 ease-in-out
-                          ${
-                            addToCart === 0
-                              ? "opacity-0 scale-0"
-                              : "opacity-100 scale-100"
-                          }`}
+                          ${addToCart === 0
+                ? "opacity-0 scale-0"
+                : "opacity-100 scale-100"
+              }`}
           >
             {addToCart}
           </span>
