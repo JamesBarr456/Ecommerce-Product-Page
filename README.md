@@ -1,4 +1,4 @@
-# Frontend Mentor - Space tourism website solution
+# Frontend Mentor - E-commerce product page challenge
 
 This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -34,7 +34,7 @@ Your users should be able to:
 
 ![Desktop](./src/assets/static/png/FireShot/Desktop.png)
 ![Mobile](./src/assets/static/png/FireShot/Mobile.png)
-![Lightbox](./src/assets/static/png/FireShot/Lightbox.png)
+![Lightbox](./src/assets/static/png/FireShot/LightBox.png)
 
 ### Links
 
