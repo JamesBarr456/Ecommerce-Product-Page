@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useCounter } from "@/assets/hooks/useCounter";
 import { ThumbnailsComponent } from "./ThumbnailsComponent";
 import { Thumbnails, Products } from "@/assets/static/Data";
-import { GalleryModal } from "./GalleryModal";
+import { Lightbox } from "./Lightbox";
 import { Carrousel } from "../common/Carrousel";
 
 export const Gallery = () => {
@@ -33,7 +33,7 @@ export const Gallery = () => {
       </picture>
 
       {activeGalleryModal && (
-        <GalleryModal hiddenGalleryModal={setActiveGalleryModal} />
+        <Lightbox hiddenGalleryModal={setActiveGalleryModal} />
       )}
     </section>
   );

@@ -5,7 +5,7 @@ import { ThumbnailsComponent } from "./ThumbnailsComponent";
 import { Thumbnails, Products } from "../../static/Data";
 import { Carrousel } from "../common/Carrousel";
 
-export const GalleryModal = ({ hiddenGalleryModal }) => {
+export const Lightbox = ({ hiddenGalleryModal }) => {
   const { count, setCount, handleMinusCount, handlePlusCount } = useCounter({
     maxCount: Products.length - 1,
   });
