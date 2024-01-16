@@ -1,6 +1,6 @@
 # Frontend Mentor - Space tourism website solution
 
-This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -17,23 +17,29 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 
 ### The challenge
 
-Users should be able to:
+Your challenge is to build out this e-commerce product page and get it looking as close to the design as possible.
 
-- View the optimal layout for each of the website's pages depending on their device's screen size
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+
+Your users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
-- View each page and be able to toggle between the tabs to see new information
+- Open a lightbox gallery by clicking on the large product image
+- Switch the large product image by clicking on the small thumbnail images
+- Add items to the cart
+- View the cart and remove items from it
 
 ### Screenshot
 
-![Home Desktop](./public/home.png)
-![Crew Desktop](./public/crew.png)
-![Home Mobile](./public/home%20mobile.png)
-![Home Navbar](./public/home%20mobile%20navbar.png)
+![Desktop](./src/assets/static/png/FireShot/Desktop.png)
+![Mobile](./src/assets/static/png/FireShot/Mobile.png)
+![Lightbox](./src/assets/static/png/FireShot/Lightbox.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/JamesBarr456/Space-Tourism)
-- Live Site URL: [Add live site URL here](https://space-tourism-challenger.netlify.app/)
+- Solution URL: [Add solution URL here](https://github.com/JamesBarr456/Ecommerce-Product-Page)
+- Live Site URL: [Add live site URL here](https://ecommer-page.netlify.app/)
 
 ## My process
 
@@ -49,7 +55,7 @@ Users should be able to:
 
 ### Continued development
 
-I feel that this project can still be greatly improved, especially in terms of the components or finding ways to save code while achieving the same result. This project definitely had its challenges, but it helped me to continue learning and push myself to find solutions to the problems.
+"This project was a challenge to further improve my practices in React + Tailwind. There are some things regarding the design of the challenge that I couldn't achieve, such as the Sidebar, and I will update it at some point to improve it even more. Another thing is that I tried to modularize as much as possible to make the code easy to understand, but I found myself at a point where I said 'Would it be better to simplify more or would doing it alone complicate the code even more?'. For my future projects, I will add TypeScript code to improve the security of the components."
 
 ## Author
 
